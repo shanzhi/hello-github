@@ -5,4 +5,5 @@
 张 长的亲， edits 大美女 
 
 day2: fork拉取 你的项目很不错，但现在是我的了。 
-day3: 搜       了不起的 awesome
+day3: 搜       了不起的 awesome  
+day4: 无疾而终   vscode git屡败屡战
