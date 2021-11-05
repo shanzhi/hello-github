@@ -21,7 +21,7 @@ def on_mouse_down(pos):
 
 def set_alien_hurt():    
     alien.image = 'alien_hurt' 
-    sounds.eep.play() 
+    sounds.ah.play() 
     clock.schedule_unique(set_alien_normal, 1.0)# 送终
 
 def set_alien_normal():  
