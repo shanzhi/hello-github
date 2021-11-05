@@ -1,16 +1,30 @@
+import pgzrun
+
+TITLE = "Alien walk"
 alien = Actor('alien')
-TITLE = "Alien walk"WIDTH = 500HEIGHT = alien.height + 20
+WIDTH = 666
+HEIGHT = alien.height + 88
 
-# The initial position of the alienalien.topright = 0, 10
+def draw(): 
+    screen.clear()  
+    alien.draw()
 
-def draw():    """Clear the screen and draw the alien."""    screen.clear()    alien.draw()
+def update():  
+    """Move the alien by one pixel."""  
+    alien.x += 1
+    if alien.left > WIDTH:     
+        alien.right = 0
 
-def update():    """Move the alien by one pixel."""    alien.x += 1
-    # If the alien is off the right hand side of the screen,    # move it back off screen to the left-hand side    if alien.left > WIDTH:        alien.right = 0
+def on_mouse_down(pos):   
+    if alien.collidepoint(pos):# 碰撞   
+        set_alien_hurt()
 
-def on_mouse_down(pos):    """Detect clicks on the alien."""    if alien.collidepoint(pos):        set_alien_hurt()
+def set_alien_hurt():    
+    alien.image = 'alien_hurt' 
+    sounds.eep.play() 
+    clock.schedule_unique(set_alien_normal, 1.0)# 送终
 
-def set_alien_hurt():    """Set the current alien sprite to the "hurt" image."""    alien.image = 'alien_hurt'    sounds.eep.play()    clock.schedule_unique(set_alien_normal, 1.0)
+def set_alien_normal():  
+    alien.image = 'alien'
 
-def set_alien_normal():    """Set the current alien sprite to the normal image."""    alien.image = 'alien'
-
+pgzrun.go()
