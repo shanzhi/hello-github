@@ -6,4 +6,5 @@
 
 day2: fork拉取 你的项目很不错，但现在是我的了。 
 day3: 搜       了不起的 awesome  
-day4: 无疾而终   vscode git屡败屡战
+day4: 无疾而终   vscode git屡败屡战  
+day5:有两次偶然对了，成功不可复制，视频让人抓狂！+ ✓ master ☁️
